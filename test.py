@@ -24,13 +24,11 @@ except ImportError:
     class LoginForm(QtWidgets.QWidget):
         login_successful = QtCore.pyqtSignal()
 
-custom_modules_path = r'E:\a_shiyiyan\ultralytics\pose'
+custom_modules_path = r'E:\a_shiyiyan'
 if custom_modules_path not in sys.path:
     sys.path.insert(0, custom_modules_path)
 
 try:
-    import ultralytics.nn.tasks as tasks
-    from ultralytics import YOLO
     import custom_modules
     from custom_modules import HQIMIntegrationModule
     tasks.HQIMIntegrationModule = HQIMIntegrationModule
